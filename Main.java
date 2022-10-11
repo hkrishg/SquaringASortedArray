@@ -15,13 +15,12 @@ class Main {
       int leftSquare = arr[left] * arr[left];
       int rightSquare = arr[right] * arr[right];
       if (rightSquare > leftSquare) {
-        squares[highestSquareIndex] = rightSquare;
+        squares[highestSquareIndex--] = rightSquare;
         right--;
       } else {
-        squares[highestSquareIndex] = leftSquare;
+        squares[highestSquareIndex--] = leftSquare;
         left++;
       }
-      highestSquareIndex--;
     }
 
     return squares;
